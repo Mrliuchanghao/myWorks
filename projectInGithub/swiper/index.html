@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>swiper导航栏-仿京东双12主会场</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .toGfHtml{
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            background: #888888;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script>
+    (function (docs, win) {
+     var docEls = docs.documentElement,
+        resizeEvts = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalcs = function () {
+            //getBoundingClientRect()这个方法返回一个矩形对象
+            window.rem = docEls.getBoundingClientRect().width/7.5;
+            if(window.rem>64.42){
+                window.rem=64.42;
+            }
+            docEls.style.fontSize = window.rem + 'px';
+        };
+        
+    recalcs();
+    if (!docs.addEventListener) return;
+    win.addEventListener(resizeEvts, recalcs, false);
+    })(document, window);</script>
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <style>
+
+
+    </style>
+</head>
+<body>
+<div id="header_part" class="txt_c">头部</div>
+<div class="inwrap">
+    <div class="nav_zhanwei">
+        <div class="nav noFixed">
+            <div class="swiper-container" id="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" >
+                        <a href="#s001"  class="block active">栏目选项1</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#s002"  class="block">栏目2</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#s003" class="block">栏目3</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#s004"  class="block">栏目展示4</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#s005"  class="block">栏目5</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#s006"  class="block">栏目6</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a  href="#s007" class="block">栏目7</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#s008"  class="block">栏目8</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#s009" class="block">栏目9</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#s010" class="block">栏目10</a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#s011" class="block">栏目11</a>
+                    </div>
+                </div>
+            </div>
+            <div class="sj">
+                <img src="images/sj_down.png"  alt="">
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="main">
+        <div class="txt_c" style="background: #888888;">中间内容</div>
+        <div class="temp">
+            <a name="s001"></a>
+            <div class="nav_title">栏目1标题</div>
+            <ul class="nav_content">
+                <li>栏目1内容</li>
+                <li>栏目1内容</li>
+                <li>栏目1内容</li>
+                <li>栏目1内容</li>
+                <li>栏目1内容</li>
+                <li>栏目1内容</li>
+            </ul>
+        </div>
+        <div class="temp">
+            <a name="s002"></a>
+            <div class="nav_title">栏目2标题</div>
+             <ul class="nav_content">
+                <li>栏目2内容</li>
+                <li>栏目2内容</li>
+                <li>栏目2内容</li>
+                <li>栏目2内容</li>
+                <li>栏目2内容</li>
+                <li>栏目2内容</li>
+            </ul>
+        </div>
+        <div class="temp">
+            <a name="s003"></a>
+            <div class="nav_title">栏目3标题</div>
+             <ul class="nav_content">
+                <li>栏目3内容</li>
+                <li>栏目3内容</li>
+                <li>栏目3内容</li>
+                <li>栏目3内容</li>
+                <li>栏目3内容</li>
+                <li>栏目3内容</li>
+            </ul>
+        </div>
+        <div class="temp">
+            <a name="s004"></a>
+            <div class="nav_title">栏目4标题</div>
+             <ul class="nav_content">
+                <li>栏目4内容</li>
+                <li>栏目4内容</li>
+                <li>栏目4内容</li>
+                <li>栏目4内容</li>
+                <li>栏目4内容</li>
+                <li>栏目4内容</li>
+            </ul>
+        </div>
+        <div class="temp">
+            <a name="s005"></a>
+            <div class="nav_title">栏目5标题</div>
+             <ul class="nav_content">
+                <li>栏目5内容</li>
+                <li>栏目5内容</li>
+                <li>栏目5内容</li>
+                <li>栏目5内容</li>
+                <li>栏目5内容</li>
+                <li>栏目5内容</li>
+            </ul>
+        </div>
+        <div class="temp">
+            <a name="s006"></a>
+            <div class="nav_title">栏目6标题</div>
+             <ul class="nav_content">
+                <li>栏目6内容</li>
+                <li>栏目6内容</li>
+                <li>栏目6内容</li>
+                <li>栏目6内容</li>
+                <li>栏目6内容</li>
+                <li>栏目6内容</li>
+            </ul>
+        </div>
+        <div class="temp">
+            <a name="s007"></a>
+            <div class="nav_title">栏目7标题</div>
+             <ul class="nav_content">
+                <li>栏目7内容</li>
+                <li>栏目7内容</li>
+                <li>栏目7内容</li>
+                <li>栏目7内容</li>
+                <li>栏目7内容</li>
+                <li>栏目7内容</li>
+            </ul>
+        </div>
+        <div class="temp">
+            <a name="s008"></a>
+            <div class="nav_title">栏目8标题</div>
+             <ul class="nav_content">
+                <li>栏目8内容</li>
+                <li>栏目8内容</li>
+                <li>栏目8内容</li>
+                <li>栏目8内容</li>
+                <li>栏目8内容</li>
+                <li>栏目8内容</li>
+            </ul>
+        </div>
+        <div class="temp">
+            <a name="s009"></a>
+            <div class="nav_title">栏目9标题</div>
+             <ul class="nav_content">
+                <li>栏目9内容</li>
+                <li>栏目9内容</li>
+                <li>栏目9内容</li>
+                <li>栏目9内容</li>
+                <li>栏目9内容</li>
+                <li>栏目9内容</li>
+            </ul>
+        </div>
+        <div class="temp">
+            <a name="s010"></a>
+            <div class="nav_title">栏目10标题</div>
+             <ul class="nav_content">
+                <li>栏目10内容</li>
+                <li>栏目10内容</li>
+                <li>栏目10内容</li>
+                <li>栏目10内容</li>
+                <li>栏目10内容</li>
+                <li>栏目10内容</li>
+            </ul>
+        </div>
+        <div class="temp">
+            <a name="s011"></a>
+            <div class="nav_title">栏目11标题</div>
+             <ul class="nav_content">
+                <li>栏目11内容</li>
+                <li>栏目11内容</li>
+                <li>栏目11内容</li>
+                <li>栏目11内容</li>
+                <li>栏目11内容</li>
+                <li>栏目11内容</li>
+            </ul>
+        </div>
+
+        <div id="zz" class="zz" style="display: none;">
+            <div class="tc1">
+                <div class="title"><span>菜单分类</span><div class="sj_up"><img src="images/sj_up.png" alt=""></div></div>
+                <div class="content">
+                    <table>
+                        <tr>
+                            <td ind="0" class="active">栏目1</td>
+                            <td ind="1">栏目2</td>
+                            <td ind="2">栏目3</td>
+                            <td ind="3">栏目4</td>
+                        </tr>
+                        <tr>
+                            <td ind="4">栏目5</td>
+                            <td ind="5">栏目6</td>
+                            <td ind="6">栏目7</td>
+                            <td ind="7">栏目8</td>
+                        </tr>
+                        <tr>
+                            <td ind="8">栏目9</td>
+                            <td ind="9">栏目10</td>
+                            <td ind="10">栏目11</td>
+                            <td></td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+        <div style="height: .3rem;"></div>
+    </div>
+
+    <div class="toGfHtml">
+        <a href="gf_demo.html">官方源码bug</a>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        // 侧边栏点击事件
+        $('.remsidebar_list a').click(function () {
+            var la = $(this).attr('target_to');
+            if(la){
+                $('.nav .swiper-slide a')[la].click();
+                navBlockActive(la);
+                i=parseInt(la);
+                mySwiper2.slideTo(la);
+
+                $('.remsidebar_zhezhao').click();
+            }
+        })
+        //导航栏轮播事件
+        function navBlockActive($index) {
+            $('#swiper-container .block.active').removeClass('active');
+            $('#swiper-container .block').eq($index).addClass('active');
+
+        }
+        var mySwiper2 = new Swiper('#swiper-container',{
+            watchSlidesProgress : true,
+            watchSlidesVisibility : true,
+            on:{
+                tap: function(){
+                    console.log(mySwiper2.clickedIndex);
+                    navBlockActive(mySwiper2.clickedIndex);
+                    i=mySwiper2.clickedIndex;
+                }
+            },
+            slidesPerView :4
+        })
+        var $swiper_slideW=$('.nav .swiper-slide').eq(0).outerWidth();
+
+
+        //滚动屏幕触发导航栏
+        var headerH=$('#header_part').eq(0).outerHeight()
+        var headerIsFixed=false;
+        var arrH=new Array();
+        var windowH=$(window).height();
+        var title_navH=$('.nav_title').eq(0).outerHeight();
+        $('.temp').each(function (index,item) {
+            arrH[index]=$(item).offset().top-windowH+title_navH;
+        })
+        console.log(arrH);
+        // 当前所在索引
+        i=0;
+
+        //进页面初始索引（只限一次就好）
+        var lock=false;
+        var numInArr= function (arr, num) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] > num) {
+                    return i - 1;
+                }
+            }
+            return arr.length-1
+        };
+        window.onscroll = function(){
+            var t = document.documentElement.scrollTop || document.body.scrollTop;
+            // 在页面刷新滚动位置不为0的情况
+            if(!lock){
+                i= numInArr(arrH,t);
+                mySwiper2.slideTo(i);
+                navBlockActive(i);
+                lock=true;
+                if(t>headerH){
+                    headerIsFixed=true;
+                    $('.nav').removeClass('noFixed')
+                }
+            }
+            // 在页面刷新滚动位置不为0的情况--end
+
+            // 使导航栏position切换fixed
+            if(t>headerH&&!headerIsFixed){
+                headerIsFixed=true;
+                $('.nav').removeClass('noFixed')
+            }
+            if(t<headerH&&headerIsFixed){
+                headerIsFixed=false;
+                $('.nav').addClass('noFixed')
+            }
+            // 使导航栏position切换fixed  --end
+            if(t>=parseInt(arrH[i+1])){
+                // 判断当前索引指向的菜单是否可见，
+                if($('.nav .swiper-slide .block.active').parent().hasClass('swiper-slide-visible')){
+                    if(!$('.nav .swiper-slide').eq(++i).hasClass('swiper-slide-visible')){
+                        mySwiper2.slideTo(mySwiper2.activeIndex+1);
+
+                    }
+                }else {
+                    mySwiper2.slideTo(i);
+                }
+                navBlockActive(i);
+                return
+            }
+            if(t<parseInt(arrH[i])){
+                // 判断当前索引指向的菜单是否可见，
+                if($('.nav .swiper-slide .block.active').parent().hasClass('swiper-slide-visible')){
+                    if(!$('.nav .swiper-slide').eq(--i).hasClass('swiper-slide-visible')){
+                        mySwiper2.slideTo(mySwiper2.activeIndex-1);
+
+                    }
+                }else {
+                    mySwiper2.slideTo(i);
+                }
+                navBlockActive(i);
+                return
+            }
+        }
+
+        //滚动屏幕触发导航栏end
+
+        // 下拉菜单栏事件
+        $('.nav .sj').click(function () {
+            $('#zz').show();
+            $('#zz .tc1 td.active').removeClass('active');
+            $('#zz .tc1 td').eq(i).addClass('active');
+        })
+
+        $('#zz .sj_up').click(function () {
+            $('#zz').hide();
+
+        })
+        // 下拉菜单栏事件end
+
+        // 选下拉菜单事件
+        $('#zz .tc1 td').click(function () {
+            var la_a=$(this).attr('ind');
+            if(la_a==undefined)return;
+            $('.nav .swiper-slide a')[la_a].click();
+            navBlockActive(la_a);
+            i=parseInt(la_a);
+            mySwiper2.slideTo(la_a);
+            $('#zz').hide();
+        })
+        // 选下拉菜单事件end
+
+    })
+</script>
+
+</body>
+</html>

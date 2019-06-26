@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>自制组件介绍</title>
+    <meta name="Keywords" content="组件" />
+    <meta name="Description" content="组件" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <style>
+        .zw {
+            text-indent: 10px;
+        }
+        .zw2{
+            text-align: center;
+    font-size: 1.2em;
+    padding: 26px 0;
+    color: #1e1e1e;
+        }
+        .pic>img {
+            max-width: 340px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .picX {
+            width: 100%;
+            overflow: auto
+        }
+
+        .picX>img {
+            max-width: none;
+        }
+        .borderPic>img{
+            border: 2px solid #000000;
+        }
+
+        .hrefTo {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .hrefTo a {
+            color: red;
+            font-size: 1.1em;
+        }
+        h4{
+            text-align: center;
+            color: red;
+            font-size: 1.16em;
+        }
+        h3{
+            font-size: 1.19em;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h3>一、为活动设计的拼图游戏插件</h3>
+    <div class="hrefTo">
+        <a href="puzzle.html">效果演示链接</a>
+    </div>
+    <div class="zw">
+        根据产品需求规划了两种拼图模式(容易和困难模式),图片选择，打乱时间，行列拼图数量和游戏成功回调函数等参数设置。以及提供页面使用者所需调用的打乱拼图方法和还原拼图方法。
+    </div>
+    <div class="pic">
+        <img src="images/list/list1.jpg" alt="">
+    </div>
+    <div class="pic">
+        <img src="images/list/list2.jpg" alt="">
+    </div>
+
+    <h3>二、公农历移动端滚动选择组件(手机移动端版，微信小程序版，vue版)</h3>
+    <h4>2.1（手机移动端版）</h4>
+    <div class="hrefTo">
+        <a href="calendar.html">效果演示链接</a>
+    </div>
+    <div class="zw">
+        根据新需求规划了时辰是否显示，初始化日期，确认日期时获取数据的回调函数等参数
+    </div>
+    <div class="pic">
+        <img src="images/list/list3.jpg" alt="">
+    </div>
+    <div class="pic picX">
+        <img src="images/list/list4.jpg" alt="">
+    </div>
+    <h4>2.2（微信小程序版公农历日期选择组件）</h4>
+    <div class="pic ">
+        <img src="images/list/list5.jpg" alt="">
+    </div>
+    <div class="zw2">
+        父组件.wxml文件引用lc_calendar日期组件写法
+    </div>
+    <div class="pic picX borderPic">
+        <img src="images/list/list6.jpg" alt="">
+    </div>
+    <div class="zw2">
+        父组件.js文件引用日期组件写法
+    </div>
+    <div class="pic picX borderPic">
+        <img src="images/list/list7.jpg" alt="">
+    </div>
+    <h4>2.3 （vue版公农历日期选择组件）</h4>
+    <div class="hrefTo">
+        <a href="vueCalendar/index.html">效果演示链接</a>
+    </div>
+    <div class="zw2">
+        父组件.vue文件引用lccalendar日期组件写法
+    </div>
+
+<div class="pic picX borderPic">
+        <img src="images/list/list8.jpg" alt="">
+    </div>
+    <h3>三、swiper导航栏-仿京东双12主会场导航栏</h3>
+    <div class="hrefTo">
+        <a href="swiper/index.html">效果演示链接</a>
+    </div>
+    <div class="pic">
+            <img src="images/list/list9.jpg" alt="">
+        </div>
+
+    <h3>四、封装canvas-画圆形进度插件</h3>
+    <div class="hrefTo">
+            <a href="circleChart.html">效果演示链接</a>
+        </div>
+        <div class="pic">
+                <img src="images/list/list10.jpg" alt="">
+            </div>
+            <div class="pic picX">
+                    <img src="images/list/list11.jpg" alt="">
+                </div>
+</body>
+
+</html>

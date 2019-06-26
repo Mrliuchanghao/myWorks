@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>拼图</title>
+    <meta name="Keywords" content="拼图" />
+    <meta name="Description" content="拼图。" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <style>
+        #gameBox {
+            display: block;
+            width: 304px;
+            height: 304px;
+            border: 1px solid #0c0b0b;
+            padding-bottom: 1px;
+        }
+
+        #gameBox .split {
+            width: 99px;
+            height: 99px;
+            background-color: #dddddd;
+            text-align: center;
+            line-height: 100px;
+            float: left;
+            box-sizing: border-box;
+            border: 1px solid #ffffff;
+            position: relative;
+            border-bottom: 0;
+        }
+
+        .white {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(255, 255, 255, .5);
+        }
+
+        .btn {
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            background: #ddafc6;
+            line-height: 50px;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        input.textInput {
+            display: block;
+        }
+
+        input {
+            margin: 8px;
+        }
+
+        .ptContent {
+            border: 2px solid #6b62a0;
+            padding: 10px;
+        }
+
+        .optionBox {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="optionBox">
+        <form class="">
+            行列数的取值范围<span style="color: red">:建议</span>(2~6)
+            <input name='hlOpt' class='textInput' type="text" placeholder="拼图行列数" value="3">
+            困难模式下打乱时间的取值范围<span style="color: red">:建议</span>(1000~10000)毫秒
+            <input name='timeOpt' class='textInput' type="text" placeholder="打乱拼图时间（单位ms）" value="2000">
+            <input id="radioEasy" type="radio" name="gamehard" value="easy" checked='checked'><label for="radioEasy">容易模式</label>
+            <input id="radioHard" type="radio" name="gamehard" value="hard"><label for="radioHard">困难模式</label> <br>
+            <input id="radioPicA" type="radio" name="gamePic" value="aaa" checked='checked'><label for="radioPicA">图片A</label>
+            <input id="radioPicB" type="radio" name="gamePic" value="bbb"><label for="radioPicB">图片B</label>
+            <input id="radioPicC" type="radio" name="gamePic" value="ccc"><label for="radioPicC">图片C</label>
+            <input class="textInput" id="submit" type="button" value="更改设置" name="submit">
+        </form>
+    </div>
+
+
+
+    <div class="ptContent">
+        <div id="gameBox">
+
+        </div>
+        <div class="btn" id="btnRandom">开始游戏</div>
+        <div class="btn" id="returnOriginal">还原拼图</div>
+    </div>
+
+
+    <script type="text/javascript" src="js/lcpuzzle.js"></script>
+
+    <script>
+        $(function () {
+            var Puzzle = $('#gameBox').drawPuzzle({
+                //行列图片数量
+                hard: 3,   
+                //打乱时间
+                goRdTime: 2000,
+                //必填图片选择 
+                img: 'images/lcpuzzle/aaa.jpg',
+                //游戏难易度选择
+                mode: 'easy',
+                //必填成功回调
+                successCallback: function () {
+                    alert('成功了');
+                }
+
+            });
+            $('#btnRandom').click(function () {
+                // 触发各模式下的随机打乱事件
+                Puzzle.handleRandom();
+            })
+
+            $('#returnOriginal').click(function () {
+                // 触发各模式下的还原拼图事件
+                Puzzle.returnOriginal();
+            })
+
+            $('#submit').click(function () {
+                var opt = {};
+                var data = $('form').serializeArray();
+                $.each(data, function () {
+                    opt[this.name] = this.value;
+                });
+                var jsonOpt = JSON.parse(JSON.stringify(opt));
+                if (jsonOpt.hlOpt < 2 || jsonOpt.hlOpt > 6 || jsonOpt.timeOpt > 10000 || jsonOpt.timeOpt < 1000) {
+                    alert('请填写建议范围内的数值')
+                    return
+                }
+
+                Puzzle = $('#gameBox').drawPuzzle({
+                    hard: jsonOpt.hlOpt,
+                    goRdTime: jsonOpt.timeOpt,
+                    img: 'images/lcpuzzle/'+jsonOpt.gamePic+'.jpg',
+                    mode: jsonOpt.gamehard,
+                    //必填成功回调
+                    successCallback: function () {
+                        alert('成功了');
+                    }
+
+                });
+
+                alert('更改设置成功');
+
+
+            })
+
+
+
+
+        })
+    </script>
+</body>
+
+</html>

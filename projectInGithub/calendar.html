@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="stylesheet" href="css/lccalendar.css">
+    <style>
+        #birthday_my {
+            background: -o-linear-gradient(bottom, #fff4a2, #ffd136);
+            background: -moz-linear-gradient(bottom, #fff4a2, #ffd136);
+            background: linear-gradient(to bottom, #fff4a2, #ffd136);
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        (function (docs, win) {
+            var docEls = docs.documentElement,
+                resizeEvts = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalcs = function () {
+                    //getBoundingClientRect()这个方法返回一个矩形对象
+                    window.rem = docEls.getBoundingClientRect().width / 7.5;
+                    if (window.rem > 93) {
+                        window.rem = 93;
+                    }
+                    docEls.style.fontSize = window.rem + 'px';
+                };
+
+            recalcs();
+            if (!docs.addEventListener) return;
+            win.addEventListener(resizeEvts, recalcs, false);
+        })(document, window);</script>
+</head>
+
+<body>
+    <!-- hasHour属性为0：不显示时辰，为1：显示时辰 -->
+    <form name="frmMeasure" id="frmMeasure" method="post" action="" style="font-size: .38rem;">
+        <span id="birthday_my" hasHour="1" data-text="公历:1985年1月1日早子时">点击弹出选择器</span>
+        <input type="hidden" name="iYear" id="iYear" class="form-input" value="1985-1-1-00" jiavalue="1" />
+
+    </form>
+   
+    <!-- <div class="button"><a href="javascript:;" target="_self" class="btnMeasure">提交</a></div> -->
+
+</body>
+
+
+</html>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script src="js/lccalendar.js"></script>
+<script>
+    var calendar1 = new lCalendar().init('#birthday_my', '').handleFinshed(function (data) {
+        // 获取确认日期事件的数据
+        console.log(data)
+    });
+
+
+// 初始化表单内容，如果storage保存了数据就会从缓存中读取
+    // initName('NumData', '');
+
+    // //lc的初始化性别
+    // lc_initSex('iSex','');
+    // //初始化生日
+    // lc_initBirthDate('birthday_my', 'iYear','');
+
+    // //验证表单
+    // // 点击完成按钮触发的表单验证函数，如果验证成功会在device.js里处理表单值进行拼接，在通过ajax传给后台。接口url在device.js里改
+    // function CheckUserInput(){
+    //     var hiddenYear = $('#hiddenYear').val();
+    //     if(hiddenYear >= 2013){
+    //         layer.open({
+    //             content: '123',
+    //             skin: 'msg',
+    //             time: 2
+    //         });
+    //         return false;
+    //     }
+
+    //     //验证姓名    (标签id   类型    序号)
+    //     var isNumData = verifyElementData('NumData', 'NumData','');
+    //     //验证生日    (标签id   类型    序号)
+    //     var isBirthDay = verifyElementData('iYear', 'iBirthday','');
+    //     //保存性别啊  (标签id  序号)
+    //     saveSexFunction('iSex','');
+    //     //提交表单
+    //     if(isNumData && isBirthDay){
+    //         return true;
+    //     }
+    // }
+
+
+</script>

@@ -1,0 +1,16 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>work1</title><script>(function (docs, win) {
+          var docEls = docs.documentElement,
+              resizeEvts = 'orientationchange' in window ? 'orientationchange' : 'resize',
+              recalcs = function () {
+                  //getBoundingClientRect()这个方法返回一个矩形对象
+                  window.rem = docEls.getBoundingClientRect().width / 7.5;
+                  if (window.rem > 93) {
+                      window.rem = 93;
+                  }
+                  docEls.style.fontSize = window.rem + 'px';
+              };
+
+          recalcs();
+          if (!docs.addEventListener) return;
+          win.addEventListener(resizeEvts, recalcs, false);
+      })(document, window);</script><link href=./static/css/app.17d7e8c1bfb4fab0abb2b050eed575cd.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=./static/js/manifest.3ad1d5771e9b13dbdad2.js></script><script type=text/javascript src=./static/js/vendor.b0faa03d15c2beafdaa7.js></script><script type=text/javascript src=./static/js/app.47f86c76665a339745ad.js></script></body></html>
