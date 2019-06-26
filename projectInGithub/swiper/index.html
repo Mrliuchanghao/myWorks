@@ -267,6 +267,7 @@
 
 <script>
     $(function () {
+        $('.swiper-slide a').attr('onclick','location.replace(this.href);return false');
         // 侧边栏点击事件
         $('.remsidebar_list a').click(function () {
             var la = $(this).attr('target_to');
